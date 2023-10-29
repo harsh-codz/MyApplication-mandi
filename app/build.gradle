@@ -35,6 +35,7 @@ android {
 
 dependencies {
 
+    implementation libs.lottie
     implementation libs.core.ktx
     implementation libs.appcompat
     implementation libs.material
