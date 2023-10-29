@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3FFD2"
+    android:theme="@style/Theme.AppCompat.Light"
+    tools:context=".Splash_screen">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/tractor_logo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:fontFamily="@font/love_ya_like_a_sister"
+        android:text="Mandi"
+        android:textAlignment="center"
+        android:textColor="#49AF26"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:text="@string/splash_welcome"
+
+        android:textAlignment="center" />
+</RelativeLayout>

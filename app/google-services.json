@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890233773878",
+    "project_id": "my-application-mandi",
+    "storage_bucket": "my-application-mandi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890233773878:android:03ecba76eefbb53ffc9d97",
+        "android_client_info": {
+          "package_name": "com.harshkethwas.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_hqTEOfT1mMuJh0sNoiPMc5YpzF26cAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

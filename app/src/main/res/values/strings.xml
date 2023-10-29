@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Mandi</string>
+    <string name="verify_welcome">Let start the journey</string>
+    <string name="splash_welcome">"Welcome in the world of virtual Farm</string>
+    <string name="verify">Verify</string>
+    <string name="farmer_image">farmer image</string>
+    <string name="mobile_number">Mobile Number</string>
+
+
+</resources>
