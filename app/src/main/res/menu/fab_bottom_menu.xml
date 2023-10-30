@@ -3,13 +3,14 @@
 
     <item
         android:id="@+id/bottom_category"
-        android:icon="@drawable/ic_category_24"
-        android:title="Category" />
+        android:icon="@drawable/marketplace"
+        android:title="@string/bottom1"
+        />
 
     <item
         android:id="@+id/bottom_history"
-        android:icon="@drawable/ic_history_24"
-        android:title="History" />
+        android:icon="@drawable/icons8_search"
+        android:title="@string/bottom2" />
 
     <item
         android:id="@+id/fab"
@@ -18,7 +19,7 @@
 
     <item
         android:id="@+id/bottom_notification"
-        android:icon="@drawable/ic_notifications_24"
+        android:icon="@drawable/auction"
         android:title="Notification" />
 
     <item
