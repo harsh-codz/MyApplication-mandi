@@ -4,25 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_green_A100_fc"
+    android:background="@color/medium_sea_green"
     tools:context=".Otpverification">
 
 
   <com.airbnb.lottie.LottieAnimationView
       android:id="@+id/lav_actionBar"
       android:layout_width="match_parent"
-      android:layout_height="400dp"
-
+      android:layout_height="252dp"
       app:layout_constraintBottom_toTopOf="@+id/linearLayout"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.185"
-
       app:lottie_autoPlay="true"
       app:lottie_fileName="ladylottie.json"
-      app:lottie_loop="true" />
+      app:lottie_loop="true"
+      />
 
 
   <LinearLayout
@@ -68,7 +67,7 @@
         android:layout_marginTop="9dp"
         android:layout_marginEnd="50dp"
         android:gravity="center"
-        android:textColor="#272B2B"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold" />
 
@@ -207,7 +206,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:backgroundTint="@android:color/holo_green_light"
+        android:backgroundTint="@color/Theme2"
+        android:elevation="10dp"
+        android:shadowColor="@color/red"
+
         android:text="SUBMIT"
         android:textColor="@color/black"
         android:textStyle="bold" />

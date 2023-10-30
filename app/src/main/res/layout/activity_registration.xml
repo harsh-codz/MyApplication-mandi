@@ -56,9 +56,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@android:color/holo_green_light"
+            android:backgroundTint="@color/Theme2"
             android:text="@string/verify"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
 
 
