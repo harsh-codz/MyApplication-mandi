@@ -30,11 +30,11 @@
             android:layout_height="match_parent"
             app:backgroundTint="@android:color/transparent"
             app:elevation="0dp"
-            app:itemIconTint="@color/black"
+
+            app:itemIconTint="@color/Theme2"
             app:itemRippleColor="@color/Theme1"
             app:itemShapeFillColor="@color/yellow_green"
             app:labelVisibilityMode="labeled"
-
             app:menu="@menu/fab_bottom_menu"/>
 
     </com.google.android.material.bottomappbar.BottomAppBar>
