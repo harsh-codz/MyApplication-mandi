@@ -18,4 +18,5 @@
     <string name="todo">TODO</string>
     <string name="bottom1">Marketplace</string>
     <string name="bottom2">Search</string>
+    <string name="register">Register</string>
 </resources>
