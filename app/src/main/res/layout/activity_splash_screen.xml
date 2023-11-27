@@ -21,7 +21,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/love_ya_like_a_sister"
+        android:fontFamily="@font/akaya_telivigala"
         android:text="@string/mandi"
         android:textAlignment="center"
         android:textColor="#49AF26"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="@string/splash_welcome"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 
 </LinearLayout>

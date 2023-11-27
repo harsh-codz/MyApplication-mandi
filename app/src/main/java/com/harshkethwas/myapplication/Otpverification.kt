@@ -14,6 +14,7 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
@@ -37,6 +38,7 @@ class Otpverification : AppCompatActivity() {
     private lateinit var OTP: String
     private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var phoneNumber: String
+    private lateinit var lottieAnimationView: LottieAnimationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +51,10 @@ class Otpverification : AppCompatActivity() {
             phoneNumber = intent.getStringExtra("phoneNumber")!!
 
             init()
+        Handler(Looper.getMainLooper()).postDelayed({
+            lottieAnimationView.cancelAnimation()
+        }, 60000)
+
             progressBar.visibility = View.INVISIBLE
             addTextChangeListener()
             resendOTPTvVisibility()
@@ -80,6 +86,12 @@ class Otpverification : AppCompatActivity() {
 
 
             }
+
+
+
+
+
+
         }
 
         private fun resendOTPTvVisibility() {
@@ -170,7 +182,7 @@ class Otpverification : AppCompatActivity() {
         }
 
         private fun sendToMain() {
-            startActivity(Intent(/* packageContext = */ this, /* cls = */ MainActivity::class.java))
+            startActivity(Intent(this, registration2::class.java))
         }
 
         private fun addTextChangeListener() {
@@ -193,6 +205,8 @@ class Otpverification : AppCompatActivity() {
             inputOTP4 = findViewById(R.id.inputotp4)
             inputOTP5 = findViewById(R.id.inputotp5)
             inputOTP6 = findViewById(R.id.inputotp6)
+            lottieAnimationView = findViewById(R.id.lav_actionBar)
+
         }
 
 
