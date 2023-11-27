@@ -1,5 +1,6 @@
 package com.harshkethwas.myapplication
 
+import android.app.appsearch.GlobalSearchSession
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toast.*
 import com.airbnb.lottie.LottieAnimationView
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -22,6 +24,14 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpConnection
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import org.json.JSONObject
+import org.json.JSONTokener
+import java.net.HttpURLConnection
+import java.net.URL
 import java.util.concurrent.TimeUnit
 
 class Otpverification : AppCompatActivity() {
@@ -39,6 +49,15 @@ class Otpverification : AppCompatActivity() {
     private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var phoneNumber: String
     private lateinit var lottieAnimationView: LottieAnimationView
+
+    private val url = URL(URLs.urlUserLogin)
+    private var postData:String = ""
+    private var contact:String=""
+
+    var fullName:String=""
+    var city:String=""
+    var email:String=""
+    var msg:String=""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,10 +97,10 @@ class Otpverification : AppCompatActivity() {
                         progressBar.visibility = View.VISIBLE
                         signInWithPhoneAuthCredential(credential)
                     } else {
-                        Toast.makeText(this, "Please Enter Correct OTP", Toast.LENGTH_SHORT).show()
+                        makeText(this, "Please Enter Correct OTP", LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this, "Please Enter OTP", Toast.LENGTH_SHORT).show()
+                    makeText(this, "Please Enter OTP", LENGTH_SHORT).show()
                 }
 
 
@@ -167,8 +186,10 @@ class Otpverification : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
 
-                        Toast.makeText(this, "Authenticate Successfully", Toast.LENGTH_SHORT).show()
-                        sendToMain()
+                        makeText(this, "Authenticate Successfully", LENGTH_SHORT).show()
+                        GlobalScope.launch(Dispatchers.Main){
+                            sendToMain()
+                        }
                     } else {
                         // Sign in failed, display a message and update the UI
                         Log.d("TAG", "signInWithPhoneAuthCredential: ${task.exception.toString()}")
@@ -181,8 +202,34 @@ class Otpverification : AppCompatActivity() {
                 }
         }
 
-        private fun sendToMain() {
-            startActivity(Intent(this, registration2::class.java))
+        private suspend fun sendToMain() {
+//            startActivity(Intent(this, registration2::class.java))
+            postData = "contact=$phoneNumber"
+            val httpConnection = HttpConnect.HttpConnection()
+            val res = httpConnection.connect(url,postData)
+
+            if(res=="no user found")
+            {
+                msg = "New User"
+                makeText(this,msg, LENGTH_LONG).show()
+                startActivity(Intent(this,registration2::class.java))
+            }
+            else
+            {
+                val jsonObject = JSONTokener(res).nextValue() as JSONObject
+                fullName = jsonObject.getString("fullname")
+                email = jsonObject.getString("email")
+                city = jsonObject.getString("city")
+
+                PassData.uFullname = fullName
+                PassData.uContact = phoneNumber
+                PassData.uEmail = email
+                PassData.uCity = city
+
+                msg = "Namaskar $fullName!"
+                makeText(this,msg, LENGTH_LONG).show()
+                startActivity((Intent(this,HomeFragment::class.java)))
+            }
         }
 
         private fun addTextChangeListener() {

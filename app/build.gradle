@@ -43,8 +43,8 @@ dependencies {
     implementation libs.firebase.auth
 
     implementation libs.kotlin.stdlib.jdk7
+    implementation libs.firebase.crashlytics.buildtools
 
-    
 
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.ext.junit

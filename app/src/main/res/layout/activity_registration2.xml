@@ -80,30 +80,11 @@
             android:autofillHints=""/>
 
 
-    <EditText
-        android:id="@+id/Contact"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:autofillHints=""
-        android:background="@drawable/edittext_design1"
-        android:digits="0123456789"
-        android:drawableStart="@drawable/baseline_phone_24"
-        android:drawablePadding="8dp"
-        android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="@string/mobile_number"
-        android:inputType="phone"
-        android:maxLength="10"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textColorHint="@color/light_grey"
-        android:textSize="16sp" />
+
 
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/city"
         android:layout_width="353dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
