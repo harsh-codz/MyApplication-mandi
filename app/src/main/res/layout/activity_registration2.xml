@@ -60,7 +60,7 @@
             android:autofillHints=""/>
 
         <EditText
-            android:id="@+id/userEmailId"
+            android:id="@+id/emailId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
