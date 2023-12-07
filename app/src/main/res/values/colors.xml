@@ -189,6 +189,32 @@
         <color name="navy">#000080</color>
         <color name="black">#000000</color>
 
+        <color name="filledBlack">#000</color>
+
+        <color name="offWhite">#BACFCACA</color>
+
+        <color name="lightGreen">#00FF5C</color>
+        <color name="googleColor">#5383EC</color>
+        <color name="grey">#F2F3F2</color>
+        <color name="lightBlack">#7C7C7C</color>
+        <color name="lightGray">#E2E2E2</color>
+
+        //
+
+        <color name="colorPrimary">#79C551</color>
+        <color name="colorPrimaryDark">#654321</color>
+        <!--    <color name="colorPrimaryDark">#79C551</color>-->
+        <color name="colorAccent">#FFF</color>
+
+        <color name="greenlite">#F56ADA23</color>
+        <color name="secondary">#E2F2DA</color>
+        <color name="semiTransparentColor">#80FFFFFF</color>
+        <color name="fontColor">#FF404A3A</color>
+        <color name="secondary2">#88d498</color>
+        <color name="secondary3">#c6dabf</color>
+        <color name="colorThird">#fc7557</color>
+        <color name="greenDark">#359701</color>
+
 
 
 

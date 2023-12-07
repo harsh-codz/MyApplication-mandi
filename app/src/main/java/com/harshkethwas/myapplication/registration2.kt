@@ -6,21 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.methods.RequestBuilder.put
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import java.net.URL
-import java.sql.Connection
-import java.sql.DriverManager
-import java.sql.PreparedStatement
-import java.sql.ResultSet
-import java.sql.SQLException
-import java.sql.Statement
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.result.Result
 import org.json.JSONObject
-import java.util.Properties
+
 
 class registration2 : AppCompatActivity() {
 
@@ -30,7 +19,7 @@ class registration2 : AppCompatActivity() {
     var fullname:String = ""
     var email:String=""
     var city:String=""
-    var contact:String="1234567891"
+    var contact:String="1234567892"
 
     lateinit var txtFullName:EditText
     lateinit var txtEmail:EditText
@@ -49,6 +38,8 @@ class registration2 : AppCompatActivity() {
             if(validateEntries(txtFullName,txtEmail,txtCity))
             {
                 executeMySQLQuery()
+                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_SHORT).show()
+                startActivity((Intent(this, HomeFragment::class.java)))
             }
             else
             {
@@ -76,8 +67,7 @@ class registration2 : AppCompatActivity() {
         return valid
     }
     private fun executeMySQLQuery() {
-        val url = "http://192.168.216.196/mandi/insert_data.php"  // Replace with your actual server URL
-
+        val url = "http://192.168.1.7/mandi/insert_data.php"
         val params = listOf(
             "contact" to contact,
             "fullname" to fullname,
@@ -93,11 +83,11 @@ class registration2 : AppCompatActivity() {
 
                     val success = json.optString("success", "")
                     val message = json.optString("message", "")
-
+                    startActivity((Intent(this, HomeFragment::class.java)))
                     if (success == "1") {
                         // Successful insertion, handle as needed
                         Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_SHORT).show()
-                        startActivity((Intent(this, HomeFragment::class.java)))
+
                     } else {
                         // Handle error
                         Toast.makeText(this, "Error: $message", Toast.LENGTH_SHORT).show()

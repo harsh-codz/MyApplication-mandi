@@ -26,6 +26,9 @@ class Registration : AppCompatActivity() {
 
     private lateinit var mProgressBar : ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 

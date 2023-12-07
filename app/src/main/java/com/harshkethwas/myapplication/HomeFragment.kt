@@ -1,5 +1,6 @@
 package com.harshkethwas.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val bottomNavigationView = view.findViewById<BottomNavigationView>(R.id.bottomNavigation)
@@ -54,6 +56,7 @@ class HomeFragment : Fragment() {
 
             val addFab = view.findViewById<FloatingActionButton>(R.id.addFabBtn)
             addFab.setOnClickListener {
+
                 Toast.makeText(context,"Add Clicked", Toast.LENGTH_LONG).show()
             }
             return view

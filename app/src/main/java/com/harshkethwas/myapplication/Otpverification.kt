@@ -254,7 +254,6 @@ class Otpverification : AppCompatActivity() {
             inputOTP4 = findViewById(R.id.inputotp4)
             inputOTP5 = findViewById(R.id.inputotp5)
             inputOTP6 = findViewById(R.id.inputotp6)
-            lottieAnimationView = findViewById(R.id.lav_actionBar)
 
         }
 

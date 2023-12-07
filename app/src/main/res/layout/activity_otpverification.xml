@@ -8,20 +8,7 @@
     tools:context=".Otpverification">
 
 
-  <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/lav_actionBar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="-159dp"
-      app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="1.0"
-      app:lottie_autoPlay="true"
-      app:lottie_fileName="ladylottie.json"
-      app:lottie_loop="true" />
+
 
   <LinearLayout
       android:id="@+id/linearLayout"
@@ -40,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="OTP Verification"
+        android:text="@string/otp_verification"
         android:textColor="#FF000000"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -49,11 +36,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+
         android:layout_marginTop="9dp"
         android:layout_marginEnd="50dp"
         android:gravity="center"
-        android:text="Please Enter the OTP sent to you"
+        android:text="@string/please_enter_the_otp_sent_to_you"
         android:textColor="#272B2B"
         android:textSize="15sp" />
 
@@ -62,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+
         android:layout_marginTop="9dp"
         android:layout_marginEnd="50dp"
         android:gravity="center"
@@ -109,7 +96,7 @@
           android:layout_width="40dp"
           android:layout_height="46dp"
           android:layout_marginStart="4dp"
-          android:layout_marginLeft="4dp"
+
           android:background="@drawable/backgroundbox"
           android:gravity="center"
           android:imeOptions="actionNext"
@@ -141,7 +128,7 @@
           android:layout_width="40dp"
           android:layout_height="46dp"
           android:layout_marginStart="4dp"
-          android:layout_marginLeft="4dp"
+
           android:background="@drawable/backgroundbox"
           android:gravity="center"
           android:imeOptions="actionNext"
@@ -157,7 +144,7 @@
           android:layout_width="40dp"
           android:layout_height="46dp"
           android:layout_marginStart="4dp"
-          android:layout_marginLeft="4dp"
+
           android:background="@drawable/backgroundbox"
           android:gravity="center"
           android:imeOptions="actionNext"
@@ -173,7 +160,7 @@
           android:layout_width="40dp"
           android:layout_height="46dp"
           android:layout_marginStart="4dp"
-          android:layout_marginLeft="4dp"
+
           android:background="@drawable/backgroundbox"
           android:gravity="center"
           android:imeOptions="actionNext"
@@ -209,7 +196,7 @@
         android:elevation="10dp"
         android:shadowColor="@color/red"
 
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textColor="@color/black"
         android:textStyle="bold" />
 

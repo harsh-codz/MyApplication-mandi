@@ -1,5 +1,6 @@
 package com.harshkethwas.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -13,10 +14,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-
-
-
-
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -91,7 +90,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this,"Share Clicked", Toast.LENGTH_LONG).show()
             }
             R.id.nav_logout -> {
-                Toast.makeText(this,"Logout Clicked", Toast.LENGTH_LONG).show()
+                Firebase.auth.signOut()
+                startActivity(Intent(this, Registration::class.java))
+
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
