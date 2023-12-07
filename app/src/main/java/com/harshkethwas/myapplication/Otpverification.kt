@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.format.DateUtils
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -16,6 +17,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.*
+import androidx.core.content.ContextCompat
 import com.airbnb.lottie.LottieAnimationView
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -202,35 +204,35 @@ class Otpverification : AppCompatActivity() {
                 }
         }
 
-        private suspend fun sendToMain() {
+    private suspend fun sendToMain() {
+            startActivity(Intent(this, registration2::class.java))
+//        postData = "contact=$phoneNumber"
+//        val httpConnection = HttpConnect.HttpConnection()
+//        val res = httpConnection.connect(url,postData)
+//
+//        if(res=="no user found")
+//        {
+//            msg = "New User"
+//           Toast.makeText(this,msg, Toast.LENGTH_LONG).show()
 //            startActivity(Intent(this, registration2::class.java))
-            postData = "contact=$phoneNumber"
-            val httpConnection = HttpConnect.HttpConnection()
-            val res = httpConnection.connect(url,postData)
-
-            if(res=="no user found")
-            {
-                msg = "New User"
-                makeText(this,msg, LENGTH_LONG).show()
-                startActivity(Intent(this,registration2::class.java))
-            }
-            else
-            {
-                val jsonObject = JSONTokener(res).nextValue() as JSONObject
-                fullName = jsonObject.getString("fullname")
-                email = jsonObject.getString("email")
-                city = jsonObject.getString("city")
-
-                PassData.uFullname = fullName
-                PassData.uContact = phoneNumber
-                PassData.uEmail = email
-                PassData.uCity = city
-
-                msg = "Namaskar $fullName!"
-                makeText(this,msg, LENGTH_LONG).show()
-                startActivity((Intent(this,HomeFragment::class.java)))
-            }
-        }
+//        }
+//        else
+//        {
+//            val jsonObject = JSONTokener(res).nextValue() as JSONObject
+//            fullName = jsonObject.getString("fullname")
+//            email = jsonObject.getString("email")
+//            city = jsonObject.getString("city")
+//
+//            PassData.uFullname = fullName
+//            PassData.uContact = phoneNumber
+//            PassData.uEmail = email
+//            PassData.uCity = city
+//
+//            msg = "Namaskar $fullName!"
+//            Toast.makeText(this,msg, Toast.LENGTH_LONG).show()
+//            startActivity((Intent(this, HomeFragment::class.java)))
+//        }
+    }
 
         private fun addTextChangeListener() {
             inputOTP1.addTextChangedListener(EditTextWatcher(inputOTP1))
