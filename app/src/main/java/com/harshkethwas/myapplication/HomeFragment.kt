@@ -50,24 +50,21 @@ class HomeFragment : Fragment() {
             true
 
         }
-            replaceFragment(Marketplace())
-            activity?.title = "Category"
-            bottomNavigationView.selectedItemId = R.id.bottom_category
+        replaceFragment(Marketplace())
+        activity?.title = "Category"
+        bottomNavigationView.selectedItemId = R.id.bottom_category
 
-            val addFab = view.findViewById<FloatingActionButton>(R.id.addFabBtn)
-            addFab.setOnClickListener {
+        val addFab = view.findViewById<FloatingActionButton>(R.id.addFabBtn)
+        addFab.setOnClickListener {
 
-                Toast.makeText(context,"Add Clicked", Toast.LENGTH_LONG).show()
-            }
-            return view
+            Toast.makeText(context,"Add Clicked", Toast.LENGTH_LONG).show()
         }
-        private fun replaceFragment(fragment: Fragment) {
-            parentFragmentManager
-                .beginTransaction()
-                .replace(R.id.bottomFragment,fragment)
-                .commit()
-        }
-        }
-
-
-
+        return view
+    }
+    private fun replaceFragment(fragment: Fragment) {
+        parentFragmentManager
+            .beginTransaction()
+            .replace(R.id.bottomFragment,fragment)
+            .commit()
+    }
+}
