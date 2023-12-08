@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+    android:background="@color/Theme1"
+        tools:context=".SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Search fragment"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:background="@color/Theme1"
-        />
+        android:layout_height="match_parent">
 
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="374dp"
+            android:layout_height="52dp"
+            android:background="@drawable/white_rect"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/orange"
+            android:hint="search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.038" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

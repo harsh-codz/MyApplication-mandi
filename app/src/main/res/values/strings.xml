@@ -64,17 +64,17 @@
     <string name="see_all">See all</string>
     <string name="shop">Shop</string>
     <string name="explore">Explore</string>
-    <string name="cart">Cart</string>
+
     <string name="favorite">Favorite</string>
     <string name="account">Account</string>
     <string name="productQuantity">%s, Price</string>
-    <string name="price">%.2f$</string>
+
     <string name="shareProduct">Hello bro,\n%1$s product is very awesome and have a very cheap price, it just cost %2$.2f$.\n You can buy it now with Superest
     supermarket app.</string>
     <string name="product_detail">Product Detail</string>
     <string name="progressTextValue">%.0fg</string>
     <string name="progressCaloriesValue">%.0f</string>
-    <string name="add_to_cart">add to cart</string>
+
     <string name="find_products">Find Products</string>
     <string name="add_all_to_cart">Add all to cart</string>
     <string name="savedToCart">Products have been added to the card successfully.</string>
@@ -123,11 +123,81 @@
     <string name="order_products">Order Products: </string>
     <string name="orderProductsWithCost">%s products - %.2f$</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="product_name">Name:</string>
     <string name="product_quantity">Quantity:</string>
     <string name="product_total_price">Total Price:</string>
     <string name="accountUpdatedSuccessfully">Account Updated Successfully</string>
     <string name="backOnline">Back Online</string>
     <string name="connectionLost">Connection Lost!</string>
+
+
+
+
+        <string name="waves_of_food">Waves Of Food</string>
+        <string name="deliver_favorite_food">Deliver Favorite Food</string>
+
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name="choose_your_location">Choose Your Location</string>
+        <string name="choose_location">Choose Location</string>
+        <string name="dummy_text">To provide you with the best dining experience, we need your permission to access your device\'s location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.\"</string>
+        <string name="image_desc_text">this image add best UI or design</string>
+        <string name="food_name">Food Name</string>
+        <string name="short_description">Short Description</string>
+        <string name="short_description_lorem">Short description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</string>
+        <string name="ingredients">Ingredients</string>
+        <string name="ing_show_berry"><![CDATA[1-> Strowberry\n 2-> Cream\n 3-> wheat]]></string>
+        <string name="add_to_cart">Add To Cart</string>
+        <string name="login_to_your_account">Login To Your Account</string>
+        <string name="email">Email</string>
+        <string name="password">Password</string>
+        <string name="or">Or</string>
+        <string name="continue_with">Continue With</string>
+        <string name="facebook">Facebook</string>
+        <string name="google">Google</string>
+        <string name="login">Login</string>
+        <string name="don_t_have_account">Don’t Have Account?</string>
+        <string name="explore_your_favorite_food">Explore Your Favorite Food</string>
+        <string name="enjoy_restaurant_quality_meals_n_at_home">Enjoy Restaurant Quality Meals \n at Home</string>
+        <string name="next">Next</string>
+        <string name="design_by_n_muhsan_tech">Design By \n Muhsan-Tech</string>
+        <string name="already_have_an_account">Already Have An Account?</string>
+        <string name="name">Name </string>
+        <string name="sign_up_here">Sign Up Here</string>
+        <string name="sign_up_with">Sign Up With</string>
+        <string name="create_account">Create Account</string>
+        <string name="popular">Popular</string>
+        <string name="view_menu">View Menu</string>
+        <string name="cart_food_name">Cart Food Name</string>
+        <string name="price">Price</string>
+        <string name="_1">1</string>
+        <string name="cart">Cart</string>
+        <string name="proceed">Proceed</string>
+        <string name="search">Search</string>
+        <string name="menu">Menu</string>
+        <string name="recent_buy">Recent buy</string>
+        <string name="spacy_crab">Spacy fresj crab</string>
+        <string name="waroenk_kita">Waroenk kita</string>
+        <string name="_35">$35</string>
+        <string name="received">Received</string>
+        <string name="previously_buy">Previously buy</string>
+        <string name="address">Address</string>
+        <string name="address_Dummy">Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices such as smartphones and tablets.</string>
+        <string name="admin_email">admin@gmail.com</string>
+        <string name="phone">Phone</string>
+        <string name="phone_number">0097123456789</string>
+        <string name="save_information">Save Information</string>
+        <string name="go_home">Go Home</string>
+        <string name="congrats_nyour_order_placed">Congrats \nYour Order Placed</string>
+        <string name="notifications">Notifications</string>
+        <string name="textview">TextView</string>
+        <string name="buy_again">Buy Again</string>
+        <string name="edit">Edit</string>
+        <string name="home">Home</string>
+        <string name="history">History</string>
+        <string name="profile">Profile</string>
+
+        <string name="default_web_client_Id" translatable="false">732386522808-1umop6dsudtos1ufn45mfn2cqp3ma550.apps.googleusercontent.com</string>
+
 </resources>
